@@ -1,7 +1,7 @@
 export default function BlogPost() {
  const Blog = [
   {
-   post_image: "/images/blog-post1.jpg",
+   post_image: "/images/market.jpg",
    post_title: "The incredible Developers",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
@@ -12,11 +12,11 @@ export default function BlogPost() {
   },
 
   {
-   post_image: "/images/blog_post4.jpg",
+   post_image: "/images/wizzy.jpg",
    post_title: "VendorSpace partners association",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
-   profile_photo: "/images/Developer.jpg",
+   profile_photo: "/images/Backend.jpg",
    profile_name: " God'spower Ovuota",
    post_type: "Article",
    post_date: "22 july 2021 - 5 min read",
@@ -101,7 +101,7 @@ export default function BlogPost() {
  ];
  return (
   <>
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-0 gap-8">
     {Blog.map((post, index) => (
      <div
       className="overflow-hidden shadow-lg rounded-lg h-90 w-full md:w-80 cursor-pointer m-auto"
