@@ -8,7 +8,7 @@ export default function Home() {
  return (
   <>
    <Head>
-    <title>Create Next App</title>
+    <title>VendorsBlog</title>
     <link rel="icon" href="/favicon.ico" />
    </Head>
    <Navbar />

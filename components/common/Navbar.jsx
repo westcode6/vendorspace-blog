@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { RiSearch2Line } from "react-icons/ri";
-import { HiMenuAlt3 } from "react-icons/hi";
+import { FcMenu } from "react-icons/fc";
 export default function Navbar() {
  return (
   <>
@@ -32,8 +32,8 @@ export default function Navbar() {
       </div>
 
       <Link href="">
-       <a className="text-2xl block md:hidden">
-        <HiMenuAlt3 />
+       <a className="text-3xl block md:hidden">
+        <FcMenu />
        </a>
       </Link>
      </div>

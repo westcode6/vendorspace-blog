@@ -68,18 +68,18 @@ export default function BlogPost() {
 
   {
    post_image: "/images/Developer.jpg",
-   post_title: "The incredible Developers",
+   post_title: "The incredible Frontend Developer",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Backend.jpg",
-   profile_name: " God'spower Ovuota",
+   profile_name: "Desmond Emejevu",
    post_type: "Video",
-   post_date: "25 mars 2022 - 6 min read",
+   post_date: "25 march 2022 - 6 min read",
   },
 
   {
    post_image: "/images/blog-post1.jpg",
-   post_title: "The incredible Frontend Developer",
+   post_title: "The incredible wizzy pounds",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Developer.jpg",
@@ -101,10 +101,10 @@ export default function BlogPost() {
  ];
  return (
   <>
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {Blog.map((post, index) => (
      <div
-      className="overflow-hidden shadow-lg rounded-lg h-90 w-80 md:w-80 cursor-pointer m-auto"
+      className="overflow-hidden shadow-lg rounded-lg h-90 w-full md:w-80 cursor-pointer m-auto"
       key={index}
      >
       <a href="#" className="w-full block h-full">
@@ -123,7 +123,7 @@ export default function BlogPost() {
         <p className="text-gray-400 dark:text-gray-300 font-light text-md">
          {post.description}
         </p>
-        <div className="flex items-center mt-5">
+        <div className="flex flex-start items-center mt-5">
          <a href="#" className="block relative">
           <img
            alt="profil"
