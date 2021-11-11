@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 export default function BlogPost() {
  const Blog = [
   {
@@ -103,46 +105,51 @@ export default function BlogPost() {
   <>
    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-0 gap-8">
     {Blog.map((post, index) => (
-     <div
-      className="overflow-hidden shadow-lg rounded-lg h-90 w-full md:w-80 cursor-pointer m-auto"
-      key={index}
-     >
-      <a href="#" className="w-full block h-full">
-       <img
-        alt="blog photo"
-        src={post.post_image}
-        className="max-h-40 w-full object-cover"
-       />
-       <div className="bg-white dark:bg-gray-800 w-full p-4">
-        <p className="text-blue-500 text-md font-semibold">
-         {post.post_type}
-        </p>
-        <h3 className="text-gray-800 dark:text-white text-xl font-medium mb-2">
-         {post.post_title}
-        </h3>
-        <p className="text-gray-400 dark:text-gray-300 font-light text-md">
-         {post.description}
-        </p>
-        <div className="flex flex-start items-center mt-5">
-         <a href="#" className="block relative">
-          <img
-           alt="profil"
-           src={post.profile_photo}
-           className="mx-auto object-cover rounded-full h-10 w-10 "
-          />
-         </a>
-         <div className="flex flex-col justify-between ml-4 text-sm">
-          <p className="text-gray-800 dark:text-white">
-           {post.profile_name}
-          </p>
-          <p className="text-gray-400 dark:text-gray-300">
-           {post.post_date}
-          </p>
+     <Link href="/blog/BlogReview/">
+      <div
+       className="overflow-hidden shadow-lg rounded-lg h-90 w-full md:w-80 cursor-pointer m-auto"
+       key={index}
+      >
+       <div className="w-full block h-full">
+        <Image
+         src={post.post_image}
+         className="object-cover"
+         width={1000}
+         height={1000}
+         alt="blog photo"
+        />
+
+        <div className="bg-white dark:bg-gray-800 w-full p-4">
+         <p className="text-blue-500 text-md font-semibold">
+          {post.post_type}
+         </p>
+         <h3 className="text-gray-800 dark:text-white text-xl font-medium mb-2">
+          {post.post_title}
+         </h3>
+         <p className="text-gray-400 dark:text-gray-300 font-light text-md">
+          {post.description}
+         </p>
+         <div className="flex  items-center mt-5">
+          <a href="#" className="block relative">
+           <img
+            alt="profil"
+            src={post.profile_photo}
+            className="mx-auto object-cover rounded-full h-10 w-10 "
+           />
+          </a>
+          <div className="flex flex-col justify-between ml-4 text-sm">
+           <p className="text-gray-800 dark:text-white">
+            {post.profile_name}
+           </p>
+           <p className="text-gray-400 dark:text-gray-300">
+            {post.post_date}
+           </p>
+          </div>
          </div>
         </div>
        </div>
-      </a>
-     </div>
+      </div>
+     </Link>
     ))}
    </div>
   </>

@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { RiSearch2Line } from "react-icons/ri";
-import { FcMenu } from "react-icons/fc";
+import { RiSearch2Line, RiMenu5Line } from "react-icons/ri";
 export default function Navbar() {
  return (
   <>
@@ -32,8 +31,8 @@ export default function Navbar() {
       </div>
 
       <Link href="">
-       <a className="text-3xl block md:hidden">
-        <FcMenu />
+       <a className="text-3xl text-blue-600 block md:hidden">
+        <RiMenu5Line />
        </a>
       </Link>
      </div>
