@@ -31,6 +31,14 @@ export default function Home() {
      font-weight: 400;
     }
 
+    .hide-scroll-bar {
+     -ms-overflow-style: none;
+     scrollbar-width: none;
+    }
+    .hide-scroll-bar::-webkit-scrollbar {
+     display: none;
+    }
+
     * {
      box-sizing: border-box;
     }

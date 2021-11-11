@@ -5,10 +5,10 @@ export default function Index() {
  return (
   <>
    <BlogHeroSection />
-   <main className="w-full bg-white px-2 md:px-12 py-12 md:py-16">
+   <main className="w-full bg-white pt-12 md:pt-16">
     <div className="header flex flex-col md:flex-row items-end justify-between mb-12">
-     <div className="title px-1 md:px-0">
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">
+     <div className="title px-4 md:px-8 ">
+      <h1 className="text-4xl font-bold text-gray-800 mb-4">
        Lastest articles
       </h1>
       <p className="text-2xl font-light text-gray-400">

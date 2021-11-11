@@ -31,7 +31,7 @@ export default function Navbar() {
       </div>
 
       <Link href="">
-       <a className="text-3xl text-blue-600 block md:hidden">
+       <a className="text-3xl text-black block md:hidden">
         <RiMenu5Line />
        </a>
       </Link>

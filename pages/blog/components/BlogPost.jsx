@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import BlogActions from "./BlogActions";
 export default function BlogPost() {
  const Blog = [
   {
-   post_image: "/images/market.jpg",
-   post_title: "The incredible Developers",
+   post_image: "/images/blog-post7.jpg",
+   post_title: "Vendor the next big thing",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Developer.jpg",
@@ -15,7 +16,7 @@ export default function BlogPost() {
 
   {
    post_image: "/images/wizzy.jpg",
-   post_title: "VendorSpace partners association",
+   post_title: "Vendor the next big thing",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Backend.jpg",
@@ -48,7 +49,7 @@ export default function BlogPost() {
 
   {
    post_image: "/images/blog_post3.jpg",
-   post_title: "The incredible Developers",
+   post_title: "Vendor the next big thing",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Developer.jpg",
@@ -59,7 +60,7 @@ export default function BlogPost() {
 
   {
    post_image: "/images/blog_post4.jpg",
-   post_title: "The incredible Developers",
+   post_title: "Vendor the next big thing",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Developer.jpg",
@@ -92,7 +93,7 @@ export default function BlogPost() {
 
   {
    post_image: "/images/blog_post6.jpg",
-   post_title: "The incredible Developers",
+   post_title: "Vendor the next big thing",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Developer.jpg",
@@ -103,9 +104,67 @@ export default function BlogPost() {
  ];
  return (
   <>
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-0 gap-8">
+   <div className="bg-gray-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-6 py-8 gap-5">
     {Blog.map((post, index) => (
      <Link href="/blog/BlogReview/">
+      <article className=" shadow-md  hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-white p-2">
+       <header className="mb-2">
+        <Image
+         src={post.post_image}
+         width={1000}
+         height={450}
+         className="object-cover rounded-tl-lg rounded-tr-lg"
+        />
+       </header>
+
+       <div className="px-1 pb-2">
+        <div className="flex justify-between items-center">
+         <span className="font-light text-gray-600">
+          {post.post_date}
+         </span>
+         <a
+          className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500"
+          href="#"
+         >
+          {post.post_type}
+         </a>
+        </div>
+        <div className="mt-2">
+         <h3
+          className="text-2xl text-gray-700 font-bold hover:text-gray-600"
+          href="#"
+         >
+          {post.post_title}
+         </h3>
+         <p className="mt-2 text-gray-600">
+          {post.description}
+         </p>
+        </div>
+        <div className="flex justify-between items-center mt-4">
+         <div>
+          <a className="flex items-center" href="#">
+           <img
+            className="w-10 h-10 object-cover rounded-full hidden sm:block"
+            src={post.profile_photo}
+            alt="avatar"
+           />
+           <span className="text-gray-700 pl-2 font-thin">
+            {post.profile_name}
+           </span>
+          </a>
+         </div>
+         <Link href="/">
+          <a className="text-blue-600 hover:underline">
+           Read more
+          </a>
+         </Link>
+        </div>
+       </div>
+      </article>
+     </Link>
+    ))}
+   </div>
+   {/* 
       <div
        className="overflow-hidden shadow-lg rounded-lg h-90 w-full md:w-80 cursor-pointer m-auto"
        key={index}
@@ -115,7 +174,7 @@ export default function BlogPost() {
          src={post.post_image}
          className="object-cover"
          width={1000}
-         height={1000}
+         height={450}
          alt="blog photo"
         />
 
@@ -148,10 +207,7 @@ export default function BlogPost() {
          </div>
         </div>
        </div>
-      </div>
-     </Link>
-    ))}
-   </div>
+      </div> */}
   </>
  );
 }
