@@ -40,7 +40,7 @@ export default function BlogPostPage() {
         />
        </div>
        <h2 className="text-gray-700 font-semibold capitalize text-xl mb-2 mx-3 px-2">
-        greater heights is calling, i'm gonna pick up
+        greater heights is calling, why not pick up ?
        </h2>
        <div className="text-gray-600 text-sm mb-6 mx-3 px-2">
         Lorem Ipsum is simply dummy text of the printing and

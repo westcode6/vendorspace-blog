@@ -137,8 +137,8 @@ export default function BlogPost() {
           {post.description}
          </p>
         </div>
-        <div className="flex justify-between items-center mt-4 ">
-         <div className="flex items-center pb-3">
+        <div className="flex justify-between items-center mt-4 pb-3">
+         <div className="flex justify-between items-center">
           <Image
            className="object-cover rounded-full"
            src={post.profile_photo}
@@ -150,6 +150,7 @@ export default function BlogPost() {
            {post.profile_name}
           </span>
          </div>
+
          <Link href="/">
           <a className="text-blue-600 hover:underline">
            Read more

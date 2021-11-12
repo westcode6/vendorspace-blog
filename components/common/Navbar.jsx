@@ -48,7 +48,7 @@ export default function Navbar() {
      </div>
 
      <ul
-      className={`flex flex-col md:flex-row  md:block mt-10 md:mt-0 justify-center items-center  md:pt-2 ${
+      className={`flex flex-col md:flex-row transition ease-out duration-500 md:block mt-10 md:mt-0 justify-center items-center  md:pt-2 ${
        showMobileNav ? "" : "hidden md:flex"
       }`}
      >
