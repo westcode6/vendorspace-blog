@@ -1,3 +1,4 @@
+import NewsLetter from "../../components/common/Newsletter";
 import BlogHeroSection from "./components/BlogHeroSection";
 import BlogPost from "./components/BlogPost";
 
@@ -22,6 +23,8 @@ export default function Index() {
 
     <BlogPost />
    </main>
+
+   <NewsLetter />
   </>
  );
 }

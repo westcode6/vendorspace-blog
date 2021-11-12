@@ -2,7 +2,6 @@ import Head from "next/head";
 import Footer from "../components/common/Footer";
 import Navbar from "../components/common/Navbar";
 import Index from "./blog";
-import BlogPost from "./blog/components/BlogPost";
 
 export default function Home() {
  return (
@@ -12,9 +11,7 @@ export default function Home() {
     <link rel="icon" href="/favicon.ico" />
    </Head>
    <Navbar />
-
    <Index />
-
    <Footer />
    <style jsx global>{`
     html,
@@ -27,16 +24,8 @@ export default function Home() {
     h1,
     h2,
     h3 {
-     font-family: "PT Serif", serif;
+     font-family: "PT Serif";
      font-weight: 400;
-    }
-
-    .hide-scroll-bar {
-     -ms-overflow-style: none;
-     scrollbar-width: none;
-    }
-    .hide-scroll-bar::-webkit-scrollbar {
-     display: none;
     }
 
     * {

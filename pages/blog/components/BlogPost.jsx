@@ -105,9 +105,9 @@ export default function BlogPost() {
  return (
   <>
    <div className="bg-gray-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-6 py-8 gap-5">
-    {Blog.map((post, index) => (
-     <Link href="/blog/BlogReview/">
-      <article className=" shadow-md  hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-white p-2">
+    {Blog.map((post) => (
+     <Link href="/blog/BlogPostPage/">
+      <article className="shadow-md  hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-white p-2">
        <header className="mb-2">
         <Image
          src={post.post_image}
@@ -130,10 +130,7 @@ export default function BlogPost() {
          </a>
         </div>
         <div className="mt-2">
-         <h3
-          className="text-2xl text-gray-700 font-bold hover:text-gray-600"
-          href="#"
-         >
+         <h3 className="text-2xl text-gray-700 font-bold hover:text-gray-600">
           {post.post_title}
          </h3>
          <p className="mt-2 text-gray-600">
@@ -141,17 +138,17 @@ export default function BlogPost() {
          </p>
         </div>
         <div className="flex justify-between items-center mt-4">
-         <div>
-          <a className="flex items-center" href="#">
-           <img
-            className="w-10 h-10 object-cover rounded-full hidden sm:block"
-            src={post.profile_photo}
-            alt="avatar"
-           />
-           <span className="text-gray-700 pl-2 font-thin">
-            {post.profile_name}
-           </span>
-          </a>
+         <div className="flex items-center">
+          <Image
+           className="object-cover rounded-full"
+           src={post.profile_photo}
+           width={40}
+           height={40}
+           alt="user"
+          />
+          <span className="text-gray-700 pl-2 font-thin">
+           {post.profile_name}
+          </span>
          </div>
          <Link href="/">
           <a className="text-blue-600 hover:underline">
@@ -164,50 +161,6 @@ export default function BlogPost() {
      </Link>
     ))}
    </div>
-   {/* 
-      <div
-       className="overflow-hidden shadow-lg rounded-lg h-90 w-full md:w-80 cursor-pointer m-auto"
-       key={index}
-      >
-       <div className="w-full block h-full">
-        <Image
-         src={post.post_image}
-         className="object-cover"
-         width={1000}
-         height={450}
-         alt="blog photo"
-        />
-
-        <div className="bg-white dark:bg-gray-800 w-full p-4">
-         <p className="text-blue-500 text-md font-semibold">
-          {post.post_type}
-         </p>
-         <h3 className="text-gray-800 dark:text-white text-xl font-medium mb-2">
-          {post.post_title}
-         </h3>
-         <p className="text-gray-400 dark:text-gray-300 font-light text-md">
-          {post.description}
-         </p>
-         <div className="flex  items-center mt-5">
-          <a href="#" className="block relative">
-           <img
-            alt="profil"
-            src={post.profile_photo}
-            className="mx-auto object-cover rounded-full h-10 w-10 "
-           />
-          </a>
-          <div className="flex flex-col justify-between ml-4 text-sm">
-           <p className="text-gray-800 dark:text-white">
-            {post.profile_name}
-           </p>
-           <p className="text-gray-400 dark:text-gray-300">
-            {post.post_date}
-           </p>
-          </div>
-         </div>
-        </div>
-       </div>
-      </div> */}
   </>
  );
 }

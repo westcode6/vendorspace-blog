@@ -1,22 +1,25 @@
 import Link from "next/link";
-import { RiSearch2Line, RiMenu5Line } from "react-icons/ri";
+import { RiSearch2Line } from "react-icons/ri";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
 export default function Navbar() {
  return (
   <>
    <header>
     <nav className="w-full fixed top-0 z-20 bg-white shadow-sm px-3 md:px-8 py-2 flex flex-col md:flex-row justify-between ">
      <div className="flex justify-between items-center">
-      <figure className="flex items-center">
-       <img
-        src="/images/logo_main.png"
-        className="h-10 object-cover"
-        alt="page logo"
-       />
+      <Link href="/">
+       <a className="flex items-center">
+        <img
+         src="/images/logo_main.png"
+         className="h-10 object-cover"
+         alt="page logo"
+        />
 
-       <h2 className="text-xl px-1 text-blue-600">
-        VendorsBlog
-       </h2>
-      </figure>
+        <h2 className="text-xl px-1 text-blue-600">
+         VendorsBlog
+        </h2>
+       </a>
+      </Link>
 
       <div className="relative ml-2 md:ml-10 hidden md:block">
        <input
@@ -30,9 +33,9 @@ export default function Navbar() {
        </span>
       </div>
 
-      <Link href="">
+      <Link href="#">
        <a className="text-3xl text-black block md:hidden">
-        <RiMenu5Line />
+        <HiOutlineMenuAlt4 />
        </a>
       </Link>
      </div>
