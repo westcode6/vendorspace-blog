@@ -4,8 +4,8 @@ import BlogActions from "./BlogActions";
 export default function BlogPost() {
  const Blog = [
   {
-   post_image: "/images/blog-post7.jpg",
-   post_title: "Vendor the next big thing",
+   post_image: "/images/beyond.png",
+   post_title: "Beyond your imaginations",
    description:
     "The new supercar is here Lorem ipsum dolor sit consectetur adipisicing elit new supercar is here, Lorem ipsum",
    profile_photo: "/images/Developer.jpg",
@@ -108,7 +108,7 @@ export default function BlogPost() {
     {Blog.map((post) => (
      <Link href="/blog/BlogPostPage/">
       <article className="shadow-md  hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-white p-2">
-       <header className="mb-2">
+       <header className="mb-3">
         <Image
          src={post.post_image}
          width={1000}
@@ -117,7 +117,7 @@ export default function BlogPost() {
         />
        </header>
 
-       <div className="px-1 pb-2">
+       <div className="px-1 pb-3">
         <div className="flex justify-between items-center">
          <span className="font-light text-gray-600">
           {post.post_date}
@@ -129,16 +129,16 @@ export default function BlogPost() {
           {post.post_type}
          </a>
         </div>
-        <div className="mt-2">
-         <h3 className="text-2xl text-gray-700 font-bold hover:text-gray-600">
+        <div className="mt-3">
+         <h3 className="text-2xl text-gray-700 capitalize font-bold hover:text-gray-600">
           {post.post_title}
          </h3>
          <p className="mt-2 text-gray-600">
           {post.description}
          </p>
         </div>
-        <div className="flex justify-between items-center mt-4">
-         <div className="flex items-center">
+        <div className="flex justify-between items-center mt-4 ">
+         <div className="flex items-center pb-3">
           <Image
            className="object-cover rounded-full"
            src={post.profile_photo}

@@ -18,14 +18,14 @@ export default function BlogPostPage() {
          <img
           className="w-12 h-12 object-cover rounded-full shadow cursor-pointer"
           alt="User avatar"
-          src="/images/blog_post5.jpg"
+          src="/images/Developer.jpg"
          />
         </div>
         <div className="flex flex-col mb-2 ml-4 mt-2">
          <div className="text-gray-600 text-sm font-semibold flex-inline">
-          Sara Lauren
+          West Africa
          </div>
-         <div className="text-gray-400 font-thin text-xs flex-inline">
+         <div className="text-gray-500 font-thin text-xs flex-inline">
           • 30 seconds ago
          </div>
         </div>
@@ -33,14 +33,14 @@ export default function BlogPostPage() {
        <div className="border-b border-gray-100"></div>
        <div className="text-gray-400 font-medium text-sm mb-7 mt-6 mx-3 px-2">
         <Image
-         src="/images/blog-post7.jpg"
+         src="/images/forest.jpg"
          width={1000}
-         height={400}
+         height={500}
          className="rounded-tl-lg rounded-tr-lg"
         />
        </div>
-       <h2 className="text-gray-600 font-semibold capitalize text-xl mb-2 mx-3 px-2">
-        Dummy text of the printing and typesetting industry
+       <h2 className="text-gray-700 font-semibold capitalize text-xl mb-2 mx-3 px-2">
+        greater heights is calling, i'm gonna pick up
        </h2>
        <div className="text-gray-600 text-sm mb-6 mx-3 px-2">
         Lorem Ipsum is simply dummy text of the printing and
@@ -52,10 +52,7 @@ export default function BlogPostPage() {
         Lorem ipsum dolor sit, amet consectetur adipisicing
         elit. Ut, officia. Lorem ipsum dolor, sit amet
         consectetur adipisicing elit. Tenetur consequatur
-        quae at quaerat consequuntur explicabo quia, cum
-        quidem voluptate commodi, ut dolorem aspernatur
-        minus quam. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Vel ratione eum temporibus.
+        quae at quaerat consequuntur.
        </div>
 
        <BlogActions />

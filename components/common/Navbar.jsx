@@ -1,7 +1,13 @@
 import Link from "next/link";
+import { useState } from "react";
 import { RiSearch2Line } from "react-icons/ri";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 export default function Navbar() {
+ const [showMobileNav, setShowMobileNav] = useState(false);
+
+ setTimeout(() => {
+  setShowMobileNav(false);
+ }, 4000);
  return (
   <>
    <header>
@@ -33,14 +39,19 @@ export default function Navbar() {
        </span>
       </div>
 
-      <Link href="#">
-       <a className="text-3xl text-black block md:hidden">
-        <HiOutlineMenuAlt4 />
-       </a>
-      </Link>
+      <button
+       className="text-3xl text-black block md:hidden"
+       onClick={() => setShowMobileNav((prev) => !prev)}
+      >
+       <HiOutlineMenuAlt4 />
+      </button>
      </div>
 
-     <ul className="flex flex-col md:flex-row mt-10 md:mt-0 hidden md:block justify-center items-center">
+     <ul
+      className={`flex flex-col md:flex-row  md:block mt-10 md:mt-0 justify-center items-center  md:pt-2 ${
+       showMobileNav ? "" : "hidden md:flex"
+      }`}
+     >
       <Link href="/">
        <a className="text-sm hover:text-blue-500 font-medium px-2">
         Post
