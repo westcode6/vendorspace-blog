@@ -39,10 +39,10 @@ export default function BlogPostPage() {
          className="rounded-tl-lg rounded-tr-lg"
         />
        </div>
-       <h2 className="text-gray-600 font-semibold text-lg mb-2 mx-3 px-2">
+       <h2 className="text-gray-600 font-semibold capitalize text-xl mb-2 mx-3 px-2">
         Dummy text of the printing and typesetting industry
        </h2>
-       <div className="text-gray-500 font-thin text-sm mb-6 mx-3 px-2">
+       <div className="text-gray-600 text-sm mb-6 mx-3 px-2">
         Lorem Ipsum is simply dummy text of the printing and
         typesetting industry. Lorem Ipsum has been the
         industry's standard dummy text ever since the 1500
@@ -50,7 +50,12 @@ export default function BlogPostPage() {
         elit. Esse aliquam assumenda porro officiis illum
         quidem consequuntur? Sapiente sunt aperiam beatae.
         Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit. Ut, officia.
+        elit. Ut, officia. Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Tenetur consequatur
+        quae at quaerat consequuntur explicabo quia, cum
+        quidem voluptate commodi, ut dolorem aspernatur
+        minus quam. Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Vel ratione eum temporibus.
        </div>
 
        <BlogActions />
